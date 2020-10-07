@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bit.paperhouse.dao.SearchRepository">
+
+<select id="getSearchWriter" parameterType="HashMap" resultType="com.bit.paperhouse.dto.WriterDto">
+	SELECT WRITE_SEQ, NAME, EMAIL, INTRO, FILE_SYSTEM
+	FROM WRITER 
+	WHERE 1=1 
+	<!-- 1. 작가로 검색했을 경우 -->
+	<if test="searchCategory != null and searchCategory != '' and searchCategory == writer">
+		AND NAME LIKE '%'||#{searchWord}||'%'
+	</if>
+	<!-- 2. 카테고리로 검색 -->
+	<if test="searchCategory != null and searchCategory != '' and searchCategory == category">
+		AND WRITE_SEQ = (SELECT WRITE_SEQ FROM ARTICLE WHERE CATEGORY LIKE '%'|| #{searchWord})||'%'
+	</if> 
+	<!-- 3 .글 제목으로 검색 -->
+	<if test="searchCategory != null and searchCategory != '' and searchCategory == title">
+		AND WRITE_SEQ = (SELECT WRITE_SEQ FROM ARTICLE WHERE TITLE LIKE '%'||#{searchWord})||'%'
+	</if>
+	ORDER BY ${searchSort} ${sort}
+</select>
+
+
+</mapper>

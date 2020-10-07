@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
-<fullyQualifiedTypeName name="org.springframework.transaction.annotation.EnableTransactionManagement"/>
-<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
-<fullyQualifiedTypeName name="com.example.demo.service.MemberService"/>
-<fullyQualifiedTypeName name="org.springframework.security.test.context.support.WithMockUser"/>
-<fullyQualifiedTypeName name="org.springframework.test.web.servlet.MockMvc"/>
 <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
 <fullyQualifiedTypeName name="org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder"/>
 <fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
@@ -20,8 +13,6 @@
 <fullyQualifiedTypeName name="org.springframework.security.provisioning.InMemoryUserDetailsManager"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.EnableWebSecurity"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
 <fullyQualifiedTypeName name="org.mybatis.spring.annotation.MapperScan"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Member"/>
 <fullyQualifiedTypeName name="demo.a.b.mapper.MemberDao"/>
@@ -40,7 +31,6 @@
 <fullyQualifiedTypeName name="com.example.demo.dao.MemberDao"/>
 <fullyQualifiedTypeName name="com.example.demo.auth.CustomUserDetails"/>
 <fullyQualifiedTypeName name="com.example.demo.service.CustomUserService"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
@@ -55,9 +45,19 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="demo.a.b.dto.MemberDto"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="demo.a.b.service.MemberService"/>
 <fullyQualifiedTypeName name="lombok.RequiredArgsConstructor"/>
-<fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.bit.paperhouse.dao.SearchRepository"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.bit.paperhouse.dto.WriterDto"/>
 <fullyQualifiedTypeName name="lombok.Data"/>
+<fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+<fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
 </qualifiedTypeNameHistroy>
