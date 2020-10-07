@@ -1,0 +1,17 @@
+package demo.a.b.mapper;
+
+
+import java.util.ArrayList;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+import demo.a.b.dto.MemberDto;
+
+
+@Repository
+public interface MemberDao {
+	
+	
+
+}

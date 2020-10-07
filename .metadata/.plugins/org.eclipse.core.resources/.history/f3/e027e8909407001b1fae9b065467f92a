@@ -1,0 +1,28 @@
+package demo.a.b.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+import demo.a.b.dao.MemberDao;
+import demo.a.b.model.CustomSecuDetails;
+
+public class CustomSecuService implements UserDetailsService {
+	
+	@Autowired
+	MemberDao dao;
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+      
+		System.out.println("CustomUserService loadUserByUsername");
+		
+		CustomSecuDetails user =  dao.findByid(username);
+		if(user == null) {
+			throw new UsernameNotFoundException(username);
+		}		
+		return user;
+	}
+
+}

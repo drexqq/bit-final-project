@@ -1,0 +1,35 @@
+package demo.a.b.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import demo.a.b.dao.UserRepository;
+import demo.a.b.dto.UserDto;
+
+
+@Service
+@Transactional
+public class MemberService {
+
+	@Autowired
+	UserRepository dao;
+	
+	@Autowired
+	PasswordEncoder bCryptPasswordEncoder;
+	
+	
+	public void regi( UserDto dto ) {
+		
+		String rPwd = dto.getPwd();
+		String securityPwd = bCryptPasswordEncoder.encode(rPwd);
+		dto.setAuthority("ROLE_USER");;
+		dto.setPwd(securityPwd);
+		
+		 dao.regi(dto);
+		
+	}
+	
+	
+}

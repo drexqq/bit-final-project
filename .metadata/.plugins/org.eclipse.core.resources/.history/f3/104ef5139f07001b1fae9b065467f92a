@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div align="center">
+<table>
+  <tr>
+    <td><input type="text" id="id" placeholder="아이디"></td>
+  </tr>
+  <tr>
+    <td><input type="text" id="pwd" placeholder="비밀번호"></td>
+  </tr>
+  <tr>
+    <td><input type="text" id="name" placeholder="이름"></td>
+  </tr>
+   <tr>
+    <td><input type="text" id="email" placeholder="이메일"></td>
+  </tr>
+</table>
+<br>
+<button type="button" id="btn" >회원가입</button>
+</div>
+<script type="text/javascript">
+ $("#btn").click(function(){
+	 
+     
+	  let id = $("#id").val();
+	  let pwd = $("#pwd").val();
+	  let name = $("#name").val();
+	  let email = $("#email").val();
+	  
+	  if(id == "" || pwd == "" || name == ""|| email == ""){
+		  alert("입력하세요");
+	  }else{
+		  $.ajax({
+				url:"http://localhost:8888/regi",
+				type:"post",
+				data:{"id":id, "pwd":pwd, "name":name, "email":email},
+				success:function(){
+					alert("회원가입 성공");
+				},
+				error:function(){
+					alert("error");
+				}
+			 });
+	  }
+	  
+	 
+	 
+ });
+  
+
+</script>
+</body>
+</html>

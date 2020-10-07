@@ -1,0 +1,32 @@
+package demo.a.b.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class testController {
+	
+	
+	@GetMapping("/")
+	public String home() throws Exception{
+		
+		return "login";
+	}
+	
+	@GetMapping("/hello")
+	public String a() throws Exception{
+		
+		return "aaaa";
+	}
+	@GetMapping("/a")
+	public String b() throws Exception{
+		
+		return "aaaa";
+	}
+	@GetMapping("/b")
+	public String c() throws Exception{
+		
+		return "bbbb";
+	}
+
+}

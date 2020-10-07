@@ -1,0 +1,18 @@
+package demo.a.b.dao;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
+
+import demo.a.b.dto.MemberDto;
+import demo.a.b.model.CustomSecuDetails;
+
+@Mapper
+@Repository 
+public interface MemberDao {
+	
+    public void regi( MemberDto dto );
+	
+	
+	public CustomSecuDetails findByid( String username );
+
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="demo.a.b.dao.MemberDao">
+
+ <select id="login" parameterType="demo.a.b.dto.MemberDto" resultType="demo.a.b.dto.MemberDto">
+  SELECT *
+  FROM MEM
+  WHERE ID = #{id}
+  AND PWD = #{pwd}
+</select>
+
+<select id="regi" parameterType="demo.a.b.dto.MemberDto">
+  INSERT INTO USERTABLE2(ID, PASSWORD, NAME, AUTHORITY, ENABLED)
+  VALUES(#{id}, #{pwd}, #{name}, #{authority}, 1)
+</select> 
+
+<select id="findByid" resultType="demo.a.b.model.CustomSecuDetails">
+   SELECT *
+   FROM USERTABLE2
+   WHERE ID = #{username}
+</select>
+
+</mapper>

@@ -1,0 +1,15 @@
+1601954081228	Rename resource 'application.properties'
+1601960740501	Delete element
+1601962090183	Move compilation unit
+1601966562675	Rename resource 'test1.html'
+1602031561713	Rename type 'MemberDto'
+1602031641228	Rename type 'MemberDao'
+1602031673615	Rename type 'MemberService'
+1602031783908	Rename resource 'member.xml'
+1602032523355	Rename package 'demo.a.b'
+1602032545824	Move compilation unit
+1602032799432	Rename package 'demo.a.b'
+1602032823399	Rename compilation unit 'Test99ApplicationTests.java'
+1602033051368	Delete element
+1602033081761	Rename type 'CustomSecuService'
+1602033104750	Rename type 'CustomSecuDetails'

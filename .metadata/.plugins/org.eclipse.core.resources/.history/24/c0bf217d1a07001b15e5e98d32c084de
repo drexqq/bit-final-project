@@ -1,0 +1,5 @@
+package demo.a.b.config;
+
+public class WebConfig {
+
+}

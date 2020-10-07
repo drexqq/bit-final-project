@@ -1,0 +1,31 @@
+package demo.a.b.dto;
+
+import java.io.Serializable;
+import java.util.Collection;
+
+import org.springframework.security.core.GrantedAuthority;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
+/*
+    CREATE TABLE USERTABLE2(
+  ID VARCHAR2(100) PRIMARY KEY,
+  PASSWORD CHAR(60) NOT NULL,
+  NAME VARCHAR2(45) NOT NULL,
+  AUTHORITY VARCHAR2(50) NOT NULL,
+  ENABLED NUMBER(1) NOT NULL  
+  )
+    
+ */
+
+public class MemberDto implements Serializable {
+	
+	private String id;
+	private String pwd;
+	private String name;
+	private String authority;
+	private String enabled;
+	
+}
