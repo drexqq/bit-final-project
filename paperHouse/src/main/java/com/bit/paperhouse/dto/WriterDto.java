@@ -14,7 +14,6 @@ public class WriterDto implements Serializable {
 	private int user_seq;
 	private int writer_seq;
 	private String name;
-	private String email;
 	private String intro;
 	private String fileOriginal_name;
 	private String file_system;
